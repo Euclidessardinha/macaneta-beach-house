@@ -14,13 +14,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Macaneta Pérola do Sul | Beach House",
-  description: "Descubra a Macaneta Pérola do Sul Beach House — um refúgio entre a natureza, o conforto e o mar.",
+  description:
+    "Descubra a Macaneta Pérola do Sul Beach House — um refúgio entre a natureza, o conforto e o mar.",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html
-      lang="en"
+      lang="pt"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
